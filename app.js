@@ -33,8 +33,8 @@ app.post('/send', async (req, res) => {
 		<li>Message: ${req.body.message} </li>
     </ul>
 	`;
-	const choise = Math.ceil(Math.random() * 2);
-	if (choise === 1) {
+	const choice = Math.ceil(Math.random() * 2);
+	if (choice === 1) {
 		const msg = {
 			to: process.env.NODE_MAIL_RECEIVER,
 			from: `SendGrid Contact <${process.env.NODE_MAIL_SENDGRID_SENDER_MAIL}>`,
