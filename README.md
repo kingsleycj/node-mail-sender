@@ -4,8 +4,10 @@ Here is a simple code example how send emails from NodeJS application using Node
 
 ## Packages Used
 
-
 - sendgrid
 - nodemailer
+
+-----------------------------
+
 
 -----------------------------
