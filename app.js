@@ -1,6 +1,6 @@
-// if (process.env.NODE_ENV !== "production") {
-//   require("dotenv").config({ path: "./config.env" });
-// }
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config({ path: "./config.env" });
+}
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -36,7 +36,7 @@ app.post("/send", async (req, res) => {
   const choice = Math.ceil(Math.random() * 2);
   if (choice === 1) {
     const msg = {
-      to: process.env.NODE_MAIL_RECEIVER,
+      to: process.env.NODE_MAIL_RECEIVER || req.body.email,
       from: `SendGrid Contact <${process.env.NODE_MAIL_SENDGRID_SENDER_MAIL}>`,
       subject: "Contact Request via Sendgrid",
       text: "Mail is sent by Send Grid",
