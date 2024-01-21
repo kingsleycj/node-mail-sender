@@ -38,7 +38,7 @@ app.post("/send", async (req, res) => {
     const msg = {
       to: process.env.NODE_MAIL_RECEIVER || req.body.email,
       from: `SendGrid Contact <${process.env.NODE_MAIL_SENDGRID_SENDER_MAIL}>`,
-      subject: "Contact Request via Sendgrid",
+      subject: "Contact Request via Send-grid",
       text: "Mail is sent by Send Grid",
       html: output,
     };
