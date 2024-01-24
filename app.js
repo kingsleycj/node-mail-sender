@@ -37,7 +37,7 @@ app.post("/send", async (req, res) => {
   if (choice === 1) {
     const msg = {
       to: process.env.NODE_MAIL_RECEIVER || req.body.email,
-      from: `SendGrid Contact <${process.env.NODE_MAIL_SENDGRID_SENDER_MAIL}>`,
+      from: `Send Grid Contact <${process.env.NODE_MAIL_SENDGRID_SENDER_MAIL}>`,
       subject: "Contact Request via Send-grid",
       text: "Mail is sent by Send Grid",
       html: output,
@@ -62,7 +62,7 @@ app.post("/send", async (req, res) => {
       subject: "Contact Request via Nodemailer",
       html: output,
     };
-    
+
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         return console.log(error);
