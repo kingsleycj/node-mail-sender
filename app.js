@@ -62,7 +62,6 @@ app.post("/send", async (req, res) => {
       subject: "Contact Request via Nodemailer",
       html: output,
     };
-
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         return console.log(error);
